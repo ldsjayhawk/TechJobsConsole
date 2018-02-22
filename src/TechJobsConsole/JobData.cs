@@ -2,6 +2,7 @@
 using System.IO;
 using System.Reflection;
 using System.Text;
+using System;
 
 namespace TechJobsConsole
 {
@@ -71,8 +72,11 @@ namespace TechJobsConsole
                    
                 {
 
-                    //string searchKey = entry.Key;
                     string searchValue = entry.Value;
+
+                    string.Equals(searchValue, value, StringComparison.CurrentCultureIgnoreCase);
+
+                    
 
                     if (searchValue.Contains(value))
                     {
