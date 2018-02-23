@@ -72,9 +72,10 @@ namespace TechJobsConsole
                    
                 {
                     string searchValue = entry.Value;
-                    searchValue.ToLower();
+                    string lowerSearchValue = searchValue.ToLower();
+                    string lowerValue = value.ToLower();
 
-                    if (searchValue.Contains(value.ToLower()))
+                    if (lowerSearchValue.Contains(lowerValue))
                     {
                         jobs.Add(row);
                     }
