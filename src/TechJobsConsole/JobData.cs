@@ -71,14 +71,10 @@ namespace TechJobsConsole
                 foreach (KeyValuePair<string, string> entry in row)
                    
                 {
-
                     string searchValue = entry.Value;
+                    searchValue.ToLower();
 
-                    string.Equals(searchValue, value, StringComparison.CurrentCultureIgnoreCase);
-
-                    
-
-                    if (searchValue.Contains(value))
+                    if (searchValue.Contains(value.ToLower()))
                     {
                         jobs.Add(row);
                     }
