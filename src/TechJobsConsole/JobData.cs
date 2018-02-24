@@ -66,15 +66,16 @@ namespace TechJobsConsole
 
             List<Dictionary<string, string>> jobs = new List<Dictionary<string, string>>();
 
-            foreach (Dictionary<string, string> row in AllJobs)
-            {
+                foreach (Dictionary<string, string> row in AllJobs)
+                {
                 foreach (KeyValuePair<string, string> entry in row)
-                   
+
                 {
                     string searchValue = entry.Value;
-                    searchValue.ToLower();
+                    string lowerSearchValue = searchValue.ToLower();
+                    string lowerValue = value.ToLower();
 
-                    if (searchValue.Contains(value.ToLower()))
+                    if (lowerSearchValue.Contains(lowerValue))
                     {
                         jobs.Add(row);
                     }
